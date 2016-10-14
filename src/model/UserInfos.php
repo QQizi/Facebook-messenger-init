@@ -6,9 +6,9 @@
  * Time: 16:29
  */
 
-namespace Usr;
+namespace UserInfos;
 
-class Usr {
+class UserInfos {
 
     public $user;
 

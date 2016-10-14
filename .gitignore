@@ -104,3 +104,5 @@ crashlytics-build.properties
 bower_components/
 min
 test
+/vendor/
+composer.lock

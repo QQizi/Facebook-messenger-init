@@ -14,7 +14,7 @@ class EmojiDetect {
     public $application;
 
     function __construct(){
-        include('src/functions/emoji.php');
+        include('emoji.php');
     }
 
     public function checkEmoji($message){
