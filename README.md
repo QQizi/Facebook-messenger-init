@@ -6,7 +6,7 @@
 ### Installation
 
 ```
-composer require qq/facebook-messenger-init
+composer require qq/izzi-facebook-messenger-init
 ```
 
 
