@@ -90,7 +90,7 @@ You can add multiple template to a message
 ## Add button template
 ```php
 $BuildMessage = new \BuildMessage\BuildMessage(ACCESS_TOKEN,$sender);
-$BuildMessage->addTemplateType('button','No seriously, hope dope is this package ?');
+$BuildMessage->addTemplateType('button','No seriously, how dope is this package ?');
 $buttonTemplate = new \TemplateElement\TemplateElement();
 $buttonTemplate->addButton("web_url", "https://giphy.com/gifs/viceprincipals-danny-mcbride-vice-principals-hbo-l46CcJYJWRg1jB3Y4", "Super dope !", "");
 $buttonTemplate->addButton("web_url", "https://giphy.com/gifs/hip-hop-rap-lAk8drorgcS9W", "More than dope", "");
