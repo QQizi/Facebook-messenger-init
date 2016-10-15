@@ -18,8 +18,7 @@
             "buildMessage": "src/model/",
             "QuickReply": "src/model/",
             "TemplateElement": "src/model/",
-            "UserInfos": "src/model/",
-            "EmojiDetect": "src/functions/"
+            "UserInfos": "src/model/"
         }
     }
 }
