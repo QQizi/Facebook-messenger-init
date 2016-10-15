@@ -15,12 +15,14 @@ class buildMessage {
     private $isPrevMessage;
     private $templateType;
 
+    private $facebookToken;
     private $idRecipient;
 
     public $message;
 
-    function __construct($idRecipient = NULL){
+    function __construct($facebookToken = NULL, $idRecipient = NULL){
         $this->idRecipient      =   $idRecipient;
+        $this->facebookToken    =   $facebookToken;
 
         $this->message          =   '{';
         $this->isMessageType    =   false;
@@ -120,14 +122,8 @@ class buildMessage {
 
         $this->message .= '}';
 
-        echo '-------MESSAGE-------';
-        echo '<pre>';
-        print_r($this->message);
-        echo '</pre>';
-        echo '-------MESSAGE-------';
-
         //Initiate cURL.
-        $ch = curl_init(GRAPH_URL);
+        $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$this->facebookToken);
 
         //Encode the array into JSON.
         $jsonDataEncoded = $this->message;
