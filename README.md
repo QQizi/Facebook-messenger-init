@@ -73,6 +73,20 @@ $QuickReply->addReply('text','Super dope','PAYLOAD_SUPER_DOPE','URL_IMAGE_2');
 $QuickReply->addReply('location','Localisation','','');
 ```
 
+## Add generic template
+```php
+$BuildMessage = new \BuildMessage\BuildMessage(ACCESS_TOKEN,$sender);
+$BuildMessage->addTemplateType('generic');
+$firstTemplateElement = new \TemplateElement\TemplateElement();
+$firstTemplateElement->createGenericElement('This package is dope like that','DOPE_IMAGE','Description of how dope is this package');
+$buttonTemplate->addButton("web_url", "https://giphy.com/gifs/viceprincipals-danny-mcbride-vice-principals-hbo-l46CcJYJWRg1jB3Y4", "Super dope !", "");
+$buttonTemplate->addButton("web_url", "https://giphy.com/gifs/hip-hop-rap-lAk8drorgcS9W", "More than dope", "");
+$BuildMessage->addTemplate($firstTemplateElement->getElement());
+$BuildMessage->sendMessage();
+```
+
+You can add multiple template to a message
+
 ## Add button template
 ```php
 $BuildMessage = new \BuildMessage\BuildMessage(ACCESS_TOKEN,$sender);
