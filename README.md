@@ -12,7 +12,7 @@ composer require qq/facebook-messenger-init
 
 ### Usages
 
-```
+```php
 <?php
 
 require 'vendor/autoload.php';
