@@ -1,0 +1,23 @@
+{
+    "name": "qq/facebook-messenger-init",
+    "version": "1.0",
+    "description": "Init message sender for Facebook Messenger Bot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quentin Mangin",
+            "email": "quentin.mangin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BuildMessage\\": "src",
+            "QuickReply\\": "src",
+            "TemplateElement\\": "src",
+            "UserInfos\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.3"
+    }
+}
