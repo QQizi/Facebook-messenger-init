@@ -6,7 +6,7 @@
  * Time: 16:29
  */
 
-namespace buildMessage;
+namespace QQizi\buildMessage;
 
 class buildMessage {
 

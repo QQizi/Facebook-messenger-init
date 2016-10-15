@@ -6,7 +6,7 @@
  * Time: 16:29
  */
 
-namespace QuickReply;
+namespace QQizi\QuickReply;
 
 class QuickReply {
 
