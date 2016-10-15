@@ -62,13 +62,13 @@ $BuildMessage->addTemplate($QuickReply->getElement());
 $BuildMessage->sendMessage();
 ```
 
-#### Add quick replies text and images
+##### Add quick replies text and images
 ```php
 $QuickReply->addReply('text','Dope','PAYLOAD_DOPE','URL_IMAGE_1');
 $QuickReply->addReply('text','Super dope','PAYLOAD_SUPER_DOPE','URL_IMAGE_2');
 ```
 
-#### Add quick replies location
+##### Add quick replies location
 ```php
 $QuickReply->addReply('location','Localisation','','');
 ```
