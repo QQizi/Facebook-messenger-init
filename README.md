@@ -97,3 +97,11 @@ $buttonTemplate->addButton("web_url", "https://giphy.com/gifs/hip-hop-rap-lAk8dr
 $BuildMessage->addTemplate($buttonTemplate->getElement());
 $BuildMessage->sendMessage();
 ```
+
+## Get user infos
+```php
+$User   =   new \UserInfos\UserInfos($sender);
+$User->getUser()->infos->first_name
+```
+
+See : https://developers.facebook.com/docs/messenger-platform/user-profile
