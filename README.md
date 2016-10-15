@@ -3,4 +3,8 @@
 ### Version
 1.0
 
-### Basic Usage
+### Installation
+
+```
+composer require qq/facebook-messenger-init
+```
