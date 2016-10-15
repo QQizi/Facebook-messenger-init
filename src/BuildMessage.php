@@ -6,9 +6,9 @@
  * Time: 16:29
  */
 
-namespace QQizi\buildMessage;
+namespace BuildMessage;
 
-class buildMessage {
+class BuildMessage {
 
     private $isMessageType;
     private $isTemplateType;
@@ -31,6 +31,11 @@ class buildMessage {
         $this->templateType     =   null;
 
         $this->message .= '"recipient":{"id":"'.$this->idRecipient.'"}';
+
+    }
+
+    public function test(){
+        return 'LOLO';
     }
 
     //Set typing indicators or send read receipts using the Send API, to let users know you are processing their request.

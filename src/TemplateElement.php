@@ -6,7 +6,7 @@
  * Time: 16:29
  */
 
-namespace QQizi\TemplateElement;
+namespace TemplateElement;
 
 class TemplateElement {
 

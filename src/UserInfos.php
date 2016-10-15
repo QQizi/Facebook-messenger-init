@@ -6,7 +6,7 @@
  * Time: 16:29
  */
 
-namespace QQizi\UserInfos;
+namespace UserInfos;
 
 class UserInfos {
 
