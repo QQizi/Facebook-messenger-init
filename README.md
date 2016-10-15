@@ -50,7 +50,7 @@ $BuildMessage->addMessageType();
 $BuildMessage->addVideo('URL_VIDEO_FILE');
 ```
 
-#### Add quick replies text only
+## Add quick replies text only
 ```php
 $BuildMessage->addMessageType();
 $BuildMessage->addText('How do you think this package is ?');
