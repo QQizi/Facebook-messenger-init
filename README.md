@@ -73,7 +73,7 @@ $QuickReply->addReply('text','Super dope','PAYLOAD_SUPER_DOPE','URL_IMAGE_2');
 $QuickReply->addReply('location','Localisation','','');
 ```
 
-#### Add button template
+## Add button template
 ```php
 $BuildMessage = new \BuildMessage\BuildMessage(ACCESS_TOKEN,$sender);
 $BuildMessage->addTemplateType('button','No seriously, hope dope is this package ?');
