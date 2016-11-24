@@ -34,10 +34,6 @@ class BuildMessage {
 
     }
 
-    public function test(){
-        return 'LOLO';
-    }
-
     //Set typing indicators or send read receipts using the Send API, to let users know you are processing their request.
     public function typingOnMessage(){
         $this->message .= ',"sender_action":"typing_on"';
@@ -98,6 +94,11 @@ class BuildMessage {
         $this->message .= $template.',';
     }
 
+    public function addButtonToTemplate($template){
+        $this->cleanAddButton();
+        $this->message .= $template.',';
+    }
+
     /*
      *
      *
@@ -112,39 +113,44 @@ class BuildMessage {
         $this->message = (substr($this->message, -1) == ',') ? substr($this->message, 0, -1) : $this->message;
     }
 
-    public function sendMessage(){
+    private function cleanAddButton(){
 
-        $this->clean();
-
-        if($this->isMessageType == true){
-            $this->message .= '}';
+        if(substr($this->message, -2, 1) == '}'){
+            $this->message = substr ($this->message, 0, -2);
+            $this->message .= ',';
         }
+    }
+
+    public function sendMessage(){
+        $this->clean();
 
         if($this->isTemplateType == true){
             $this->message .= ($this->templateType != 'button')? ']}' : '';
             $this->message .= '}}';
         }
 
-        $this->message .= '}';
+        if($this->isMessageType == true){
+            $this->message .= '}';
+        }
 
+        $this->message .= '}';
         //Initiate cURL.
         $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$this->facebookToken);
-
         //Encode the array into JSON.
         $jsonDataEncoded = $this->message;
-
         //Tell cURL that we want to send a POST request.
         curl_setopt($ch, CURLOPT_POST, 1);
-
         //Attach our encoded JSON string to the POST fields.
         curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonDataEncoded);
-
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         //Set the content type to application/json
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
-
         //Execute the request
         $result = curl_exec($ch);
+
+        var_dump($result);
+
+        return $result;
     }
 
 }
