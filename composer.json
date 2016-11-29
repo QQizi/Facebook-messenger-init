@@ -1,6 +1,6 @@
 {
     "name": "qq/izzi-facebook-messenger-init",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Izzi init message sender for Facebook Messenger Bot",
     "license": "MIT",
     "minimum-stability" : "stable",
