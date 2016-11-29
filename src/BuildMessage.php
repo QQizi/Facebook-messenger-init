@@ -152,5 +152,4 @@ class BuildMessage {
 
         return $result;
     }
-
 }
