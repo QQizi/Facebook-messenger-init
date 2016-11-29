@@ -31,7 +31,6 @@ class BuildMessage {
         $this->templateType     =   null;
 
         $this->message .= '"recipient":{"id":"'.$this->idRecipient.'"}';
-
     }
 
     //Set typing indicators or send read receipts using the Send API, to let users know you are processing their request.
