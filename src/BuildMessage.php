@@ -132,7 +132,6 @@ class BuildMessage {
         if($this->isMessageType == true){
             $this->message .= '}';
         }
-
         $this->message .= '}';
         //Initiate cURL.
         $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$this->facebookToken);
