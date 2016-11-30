@@ -22,15 +22,6 @@ class TemplateElement {
     }
 
     public function createGenericElement($titre,$itemUrl,$imageUrl,$subtitle){
-
-        if(mb_detect_encoding($subtitle,'ISO-8859-1',true)) {
-            $subtitle = iconv('ISO-8859-1', 'UTF-8//TRANSLIT', $subtitle);
-        }
-
-        if(mb_detect_encoding($titre,'ISO-8859-1',true)) {
-            $titre = iconv('ISO-8859-1', 'UTF-8//TRANSLIT', $titre);
-        }
-
         $this->element .= '{';
         $this->element .= (strlen($titre)) ? '"title":"'.$titre.'",' : '';
         $this->element .= (strlen($itemUrl)) ? '"item_url":"'.$itemUrl.'",' : '';
