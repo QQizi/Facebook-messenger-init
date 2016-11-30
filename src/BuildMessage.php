@@ -142,9 +142,13 @@ class BuildMessage {
         //Set the content type to application/json
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         //Execute the request
-        $result = curl_exec($ch);
 
-        var_dump($result);
+        $response = curl_exec($ch);
+
+        $result = array(
+            "request" => $this->message,
+            "response" => $response
+        );
 
         return $result;
     }
