@@ -105,7 +105,22 @@ class BuildMessage {
      * */
 
     public function getMessage(){
-        return $this->message;
+
+        $message = $this->message;
+
+        $this->clean();
+
+        if($this->isTemplateType == true){
+            $message .= ($this->templateType != 'button')? ']}' : '';
+            $message .= '}}';
+        }
+
+        if($this->isMessageType == true){
+            $message .= '}';
+        }
+        $message .= '}';
+
+        return $message;
     }
 
     private function clean(){
